@@ -8,8 +8,8 @@ import com.capgemini.phonesimulatorapplication.factory.ContactFactory;
 
 public class ContactServicesImpl implements ContactServices {
 
-	
-	ContactDAO dao=ContactFactory.instanceOfContactDAOImpl();
+	ContactDAO dao = ContactFactory.instanceOfContactDAOImpl();
+
 	@Override
 	public List<ContactInfo> getAllContact() {
 		// TODO Auto-generated method stub
@@ -17,7 +17,7 @@ public class ContactServicesImpl implements ContactServices {
 	}
 
 	@Override
-	public String getContact(String name) {
+	public ContactInfo getContact(String name) {
 		// TODO Auto-generated method stub
 		return dao.getContact(name);
 	}
