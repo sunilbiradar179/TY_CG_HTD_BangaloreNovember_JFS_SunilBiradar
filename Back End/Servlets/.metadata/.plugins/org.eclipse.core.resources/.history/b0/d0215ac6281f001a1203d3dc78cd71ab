@@ -1,0 +1,13 @@
+package com.capgmini.mywebapp.dao;
+
+import com.capgmini.mywebapp.beans.EmployeeInfoBean;
+
+public class EmployeeDaoImpl implements EmployeeDao  {
+
+	@Override
+	public EmployeeInfoBean searchEmployee(int empId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

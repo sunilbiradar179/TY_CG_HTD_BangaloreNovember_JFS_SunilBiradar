@@ -1,0 +1,11 @@
+package com.capgmini.mywebapp.servlets;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+@WebServlet("/readCookie")
+public class ReadCookieServlet extends HttpServlet
+{
+	
+
+}

@@ -1,0 +1,22 @@
+package com.capgemini.mywebapp.servletsforjsp;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.capgmini.mywebapp.service.EmployeeService;
+import com.capgmini.mywebapp.service.EmployeeServiceImpl;
+@WebServlet("/addEmployee2")
+public class AddEmployeeServlet extends HttpServlet{
+	private EmployeeService service=new EmployeeServiceImpl();
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+	}
+
+}

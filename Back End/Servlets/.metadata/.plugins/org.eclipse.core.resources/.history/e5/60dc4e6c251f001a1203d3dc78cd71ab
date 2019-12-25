@@ -1,0 +1,52 @@
+package com.capgmini.mywebapp.beans;
+
+
+
+public class EmployeeInfoBean 
+{
+	private int eempId;
+	private String name;
+	private double salary;
+	private int age;
+	private String designation;
+	private String password;
+	public int getEempId() {
+		return eempId;
+	}
+	public void setEempId(int eempId) {
+		this.eempId = eempId;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getSalary() {
+		return salary;
+	}
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public String getDesignation() {
+		return designation;
+	}
+	public void setDesignation(String designation) {
+		this.designation = designation;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
+	
+
+}

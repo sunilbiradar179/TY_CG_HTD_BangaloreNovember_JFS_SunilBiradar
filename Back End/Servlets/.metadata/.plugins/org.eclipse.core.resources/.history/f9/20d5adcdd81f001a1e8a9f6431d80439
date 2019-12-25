@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	version="3.1">
+	<display-name>mywebapp</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	
+	
+	<context-param>
+	<param-name>myContextParam</param-name>
+	<param-value>12345</param-value>
+	</context-param>
+	
+	<servlet>
+	
+	<init-param>
+	<param-name>myConfigParam</param-name>
+	<param-value>098754</param-value>
+	</init-param>
+	
+	<servlet-name>currentDate</servlet-name>
+	<servlet-class>com.capgmini.mywebapp.servlets.DateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>currentDate </servlet-name>
+	<url-pattern>/currentDate</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>getEmp</servlet-name>
+	<servlet-class>com.capgmini.mywebapp.servlets.GetEmployeeServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>getEmp </servlet-name>
+	<url-pattern>/getEmp</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>searchEmp</servlet-name>
+	<servlet-class>com.capgmini.mywebapp.servlets.SearchEmployeeServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>searchEmp </servlet-name>
+	<url-pattern>/searchEmp</url-pattern>
+	</servlet-mapping>
+	
+</web-app>

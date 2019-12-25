@@ -1,0 +1,12 @@
+package com.capgmini.mywebapp.beans;
+
+public class EmployeeInfoBean 
+{
+	private int eempId;
+	private String name;
+	private double salary;
+	private int age;
+	private String designation;
+	private String password;
+
+}

@@ -1,0 +1,9 @@
+package com.capgmini.mywebapp.service;
+
+import com.capgmini.mywebapp.beans.EmployeeInfoBean;
+
+public interface EmployeeService 
+{
+	public EmployeeInfoBean searchEmployee(int empId);
+
+}

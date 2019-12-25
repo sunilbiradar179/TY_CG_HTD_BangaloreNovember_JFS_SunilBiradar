@@ -1,0 +1,5 @@
+package com.capgmini.mywebapp.beans;
+
+public class EmployeeInfoBean {
+
+}

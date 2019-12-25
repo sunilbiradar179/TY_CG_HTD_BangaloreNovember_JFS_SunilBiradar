@@ -1,0 +1,41 @@
+package com.capgmini.mywebapp.servlets;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+@WebServlet("/searchEmployee2")
+public class SearchEmployeeServlet2 extends HttpServlet //for validating the session
+{
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		//getting the session...false wiil return if session is running otherwise return null
+		HttpSession session=req.getSession(false);
+		
+		resp.setContentType("text/html");
+		PrintWriter out=resp.getWriter();
+		out.print("<html>");
+		out.print("<body>");
+		if (session!=null) 
+		{
+			//valid session
+			
+		}
+		else
+		{
+			//invalid session
+			
+			out.print("Please login First");
+			
+			req.getRequestDispatcher("./loginPage.html").include(req, resp);
+		}
+	}
+
+}

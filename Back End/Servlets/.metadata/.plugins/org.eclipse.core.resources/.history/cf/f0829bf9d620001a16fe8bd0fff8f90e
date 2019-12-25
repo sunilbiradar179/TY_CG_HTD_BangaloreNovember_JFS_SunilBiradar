@@ -1,0 +1,8 @@
+package com.capgemini.mywebapp.servletsforjsp;
+
+import javax.servlet.annotation.WebServlet;
+
+@WebServlet("/searchEmployee3")
+public class SearchEmployeeServlet {
+
+}

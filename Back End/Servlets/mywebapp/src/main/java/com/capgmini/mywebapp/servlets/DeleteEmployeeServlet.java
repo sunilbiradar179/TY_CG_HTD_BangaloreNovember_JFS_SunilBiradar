@@ -1,0 +1,61 @@
+package com.capgmini.mywebapp.servlets;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import com.capgmini.mywebapp.service.EmployeeService;
+import com.capgmini.mywebapp.service.EmployeeServiceImpl;
+
+@WebServlet("/deleteEmployee")
+public class DeleteEmployeeServlet extends HttpServlet
+{
+	
+	private EmployeeService service=new EmployeeServiceImpl();
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		HttpSession session=req.getSession(false);
+		
+		if(session!=null)
+		{
+			//valid session
+			int empId=Integer.parseInt(req.getParameter("empId"));
+			PrintWriter out=resp.getWriter();
+			out.print("<html>");
+			out.print("<body>");
+			
+			if(service.deleteEmployee(empId))
+			{
+	
+				out.print("<h3>Employee Record for"+empId+"Deleted></h3>");
+			}
+			else
+			{
+			out.print("<h3>Employee ID "+empId+"Not Found></h3>");
+			}
+			out.print("</html>");
+			out.print("</body>");
+			
+			req.getRequestDispatcher("./deleteEmpForm.html").include(req, resp);
+		}
+		else
+		{
+			//invalid session
+			PrintWriter out=resp.getWriter();
+			out.print("<html>");
+			out.print("<body>");
+			out.print("<h3>Please Login First</h3>");
+			out.print("</html>");
+			out.print("</body>");
+			
+			req.getRequestDispatcher("./loginPage.html").include(req, resp);
+		}
+	}
+
+}
