@@ -1,0 +1,9 @@
+INDEX VERSION 1.131
+C:\Users\$khan\eclipse-workspace-spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1230010437.index
+\mvcpract\src\main\resources
+C:\Users\$khan\eclipse-workspace-spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2295949664.index
+\springmvc\src\main\java
+C:\Users\$khan\eclipse-workspace-spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3490526498.index
+\springmvc\src\main\resources
+C:\Users\$khan\eclipse-workspace-spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3674288248.index
+\mvcpract\src\main\java

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.capgemini.spring.dao&apos; to &apos;com.capgemini.di&apos;&#x0D;&#x0A;- Original project: &apos;dependency_injection&apos;&#x0D;&#x0A;- Original element: &apos;dependency_injection/src/com.capgemini.spring.dao&apos;&#x0D;&#x0A;- Renamed element: &apos;dependency_injection/src/com.capgemini.di&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.capgemini.spring.dao&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.capgemini.spring.dao" name="com.capgemini.di" qualified="false" references="true" stamp="1576666276728" textual="false" version="1.0"/>
+</session>

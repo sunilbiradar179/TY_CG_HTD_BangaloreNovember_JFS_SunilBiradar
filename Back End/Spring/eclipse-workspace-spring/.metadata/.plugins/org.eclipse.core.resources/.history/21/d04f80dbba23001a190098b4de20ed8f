@@ -1,0 +1,13 @@
+package com.capgemini.springmvc;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+
+@Controller
+public class SpringController {
+	public String hello(ModelMap map) {
+		
+		map.addAllAttributes("msg","Hello World ........!!!");
+		return "index";
+	}
+}

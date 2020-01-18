@@ -1,0 +1,5 @@
+package com.capgemini.springcores.beans;
+
+public class BeanPostProcesserClass {
+
+}

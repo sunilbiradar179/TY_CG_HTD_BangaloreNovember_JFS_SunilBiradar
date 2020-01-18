@@ -1,0 +1,12 @@
+package com.capgemini.springcores.configauthor;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class AnnotationBookAuthor {
+	public static void main(String[] args) {
+		AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
+		
+		Author a = context.getBean(Author.class);
+	}
+
+}

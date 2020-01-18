@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd 
+    http://www.springframework.org/schema/context 
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean id="hello" class="com.capgemini.springcores.beans.Hello"
+		scope="prototype">
+		<!-- <property name="message" value = "i love java"></property> <property 
+			name="count" value="10"></property> -->
+		<!-- By Using Getters and setters -->
+		<!-- Set The Count 10 -->
+		<!-- Set Message -->
+
+		<constructor-arg name="message" value="I love Python">
+		</constructor-arg>
+		<constructor-arg name="count" value="20"></constructor-arg>
+		<!-- only for Constructor -->
+	</bean>
+
+	<bean id="cat" class="com.capgemini.springcores.beans.Cat"></bean>
+
+	<bean id="dog" class="com.capgemini.springcores.beans.Dog"
+		primary="true"></bean>
+
+
+
+	<bean id='pet' class="com.capgemini.springcores.beans.Pet" autowire = "byType">
+	
+		<property name="name" value="jimmy"></property>
+		
+		<!-- <property name="animal" ref=""></property> -->
+		
+	</bean>
+	
+	
+</beans>

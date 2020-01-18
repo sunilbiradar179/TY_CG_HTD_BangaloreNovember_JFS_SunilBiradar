@@ -1,0 +1,8 @@
+package com.capgemini.springcores;
+
+public class LifeCycleTest {
+	public static void main(String[] args) {
+		
+	}
+
+}

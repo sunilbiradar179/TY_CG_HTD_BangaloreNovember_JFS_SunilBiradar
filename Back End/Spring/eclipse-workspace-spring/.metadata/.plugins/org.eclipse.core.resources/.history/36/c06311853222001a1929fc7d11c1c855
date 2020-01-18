@@ -1,0 +1,16 @@
+package com.capgemini.springcores.beans;
+
+public class Hello {
+	private String message;
+	private int count;
+
+	public String getMessage() {
+		return message;
+	}
+
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	
+	
+}

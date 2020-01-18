@@ -1,0 +1,14 @@
+package com.capgemini.springcores.overriding;
+
+import java.io.IOException;
+import java.util.Vector;
+
+public class SubClass extends SuperClass {
+	
+
+	@Override
+	public  Vector<Object> method() throws IOException {
+
+		return super.method();
+	}
+}

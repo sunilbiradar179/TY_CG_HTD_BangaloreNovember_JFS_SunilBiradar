@@ -1,0 +1,10 @@
+package com.capgemini.springcores.overriding;
+
+import java.io.IOException;
+import java.util.AbstractList;
+
+public class SuperClass {
+	protected AbstractList<Object> method() throws IOException {
+		return null;
+	}
+}

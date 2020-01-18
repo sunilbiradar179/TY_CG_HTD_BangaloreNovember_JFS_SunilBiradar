@@ -1,0 +1,6 @@
+package com.capgemini.springcores.configauthor;
+
+public interface Author {
+	public void aName();
+
+}

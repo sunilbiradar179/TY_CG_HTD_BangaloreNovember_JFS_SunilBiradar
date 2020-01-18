@@ -1,0 +1,7 @@
+package com.capgemini.springcores.beans;
+
+public class Pet {
+	private String name;
+	private Animal animal ;
+	
+}

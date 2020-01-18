@@ -1,0 +1,20 @@
+package com.capgemini.springcores;
+
+import java.applet.AppletContext;
+
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import com.capgemini.springcores.beans.Hello;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+    	AppletContext context = (AppletContext) new ClassPathXmlApplicationContext("bean.xml");
+    	Hello hello = context.getB
+    }
+}

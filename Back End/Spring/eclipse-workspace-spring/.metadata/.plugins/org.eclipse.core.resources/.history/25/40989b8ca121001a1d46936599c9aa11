@@ -1,0 +1,6 @@
+package com.capgemini.springcores.beans;
+
+public class Hello {
+	private String message;
+	
+}

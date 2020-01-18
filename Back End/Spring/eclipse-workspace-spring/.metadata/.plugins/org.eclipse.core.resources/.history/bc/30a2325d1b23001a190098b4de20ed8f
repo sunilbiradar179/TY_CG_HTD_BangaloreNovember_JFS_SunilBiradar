@@ -1,0 +1,31 @@
+package com.capgemini.springcores.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
+
+import com.capgemini.springcores.beans.Cat;
+import com.capgemini.springcores.beans.Dog;
+import com.capgemini.springcores.beans.Hello;
+
+@Configuration
+public class BeansConfig {
+	
+	@Bean("hello")
+	public Hello getHello() {   		//Factory Method
+		Hello hello = new Hello();
+		hello.setMessage("I love Marvel");
+		hello.setCount(1000);
+		return hello;
+
+	}
+	@Bean("dog")
+	@Scope("prototype")
+	public Dog getDog() {
+		return new Dog();
+	}
+	
+	public Cat getCat() {
+		return new Cat();
+	}
+}

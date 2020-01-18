@@ -1,0 +1,7 @@
+package com.capgemini.springcores.configauthor;
+
+public class Book {
+	private String name;
+	private String author;
+
+}
