@@ -1,0 +1,48 @@
+<!-- <div class="alert alert-success" *ngIf='message'>{{message}}</div> -->
+
+
+<form #updateClientForm='ngForm' (ngSubmit)='updateClient(updateClientForm)'>
+    <div class="container">
+      <h1>Update Client</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+
+       <input type="hidden" name="id" id="id"
+            #name='ngModel' [(ngModel)] ='clientService.selectedProduct.id'
+            class="form-control" >
+  
+      <label for="username"><b>Username</b></label>
+      <input type="text" name=username id="username"
+      #username='ngModel' [(ngModel)]='clientService.selectedProduct.username'
+      placeholder="Enter Username" disabled>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" name="password" id="password" 
+      #password='ngModel' [(ngModel)]='clientService.selectedProduct.password'
+      placeholder="Enter Password"  required
+      pattern="^[a-zA-Z]+(?: [a-zA-Z]+)*$" minlength="2" maxlength="10">
+      <div class="validationText" *ngIf='(password.dirty || password.touched) && password.invalid'>
+        <div *ngIf='password.errors.required'>
+                *This field is mandatory
+        </div>
+        <div *ngIf='password.errors.minlength'>
+                *minimum 2 letters mandatory
+        </div>
+        <div *ngIf='password.errors.pattern'>
+                *only alphabets are allowed
+        </div>
+</div>
+  
+      <label for="type"><b>Role</b></label>
+      <input type="text" name="type" id="type"
+      #type='ngModel' [(ngModel)]='clientService.selectedProduct.type'
+      placeholder="Enter Role"  disabled>
+      <hr>
+  
+      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+      <button type="submit" class="registerbtn">Update</button>
+    </div>
+  
+    
+  </form>
+

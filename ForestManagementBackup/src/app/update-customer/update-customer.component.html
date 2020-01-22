@@ -1,0 +1,124 @@
+
+
+<form #updateCustomerForm='ngForm' (ngSubmit)='updateCustomer(updateCustomerForm)'>
+    <div class="container">
+      <h1>Update Customer</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+  
+      <label for="custId"></label>
+      <input type="hidden" name=custId id="custId"
+      #custId='ngModel' [(ngModel)]='customerService.selectedCustomer.custId'
+      placeholder="Enter Customer Id" >
+  
+      <label for="custName"><b>Customer Name</b></label>
+      <input type="text" name="custName" id="custName" 
+      #custName='ngModel'[(ngModel)]='customerService.selectedCustomer.custName'
+      placeholder="Enter Customer Name"  required
+      pattern="^[a-zA-Z]+(?: [a-zA-Z]+)*$" minlength="2" maxlength="20">
+      <div class="validationText" *ngIf='(custName.dirty || custName.touched) && custName.invalid'>
+        <div *ngIf='custName.errors.required'>
+                *This field is mandatory
+        </div>
+        <div *ngIf='custName.errors.minlength'>
+                *minimum 2 letters mandatory
+        </div>
+        <div *ngIf='custName.errors.pattern'>
+                *only alphabets are allowed
+        </div>
+</div>
+  
+      <label for="address1"><b>Address1</b></label>
+      <input type="text" name="address1" id="address1"
+      #address1='ngModel'[(ngModel)]='customerService.selectedCustomer.address1'
+      placeholder="Enter Address1"  minlength="2" maxlength="45"  required>
+      <div class="validationText" *ngIf='(address1.dirty || address1.touched) && address1.invalid'>
+        <div *ngIf='address1.errors.required'>
+                *This field is mandatory
+        </div>
+        <div *ngIf='address1.errors.minlength'>
+                *minimum 2 letters mandatory
+        </div>
+</div>
+
+      <label for="addres2"><b>Address2</b></label>
+      <input type="text" name="addres2" id="addres2"
+      #addres2='ngModel'[(ngModel)]='customerService.selectedCustomer.addres2'
+      placeholder="Enter Address2" minlength="2" maxlength="45" required>
+      <div class="validationText" *ngIf='(addres2.dirty || addres2.touched) && addres2.invalid'>
+        <div *ngIf='addres2.errors.required'>
+                *This field is mandatory
+        </div>
+        <div *ngIf='addres2.errors.minlength'>
+                *minimum 5 characters required
+        </div>
+</div>
+
+      <label for="town"><b>Town</b></label>
+      <input type="text" name="town" id="town"
+      #town='ngModel' [(ngModel)]='customerService.selectedCustomer.town'
+      placeholder="Enter Town" pattern="^[a-zA-Z]+(?: [a-zA-Z]+)*$" minlength="2"  required>
+      <div class="validationText" *ngIf='(town.dirty || town.touched) && town.invalid'>
+        <div *ngIf='town.errors.required'>
+                *This field is mandatory
+        </div>
+        <div *ngIf='town.errors.minlength'>
+                *minimum 2 letters mandatory
+        </div>
+        <div *ngIf='town.errors.pattern'>
+                *only characters are allowed
+        </div>
+</div>
+
+      <label for="postalCode"><b>PostalCode</b></label>
+      <input type="text" name="postalCode" id="postalCode"
+      #postalCode='ngModel' [(ngModel)]='customerService.selectedCustomer.postalCode'
+      placeholder="Enter PostalCode" minlength="6" maxlength="6" pattern="[0-9]+" required>
+      <div class="validationText"*ngIf='(postalCode.dirty || postalCode.touched) && postalCode.invalid'>
+        <div *ngIf='postalCode.errors.required'>
+                *This field is mandatory
+        </div>
+        <div *ngIf='postalCode.errors.minlength'>
+                *Postal code length should be of 6 digits
+        </div>
+        <div *ngIf='postalCode.errors.pattern'>
+                *only numbers are allowed
+        </div>
+</div>
+
+      <label for="email"><b>email</b></label>
+      <input type="email" name="email" id="email"
+      #email='ngModel' [(ngModel)]='customerService.selectedCustomer.email'
+      placeholder="Enter email"  required>
+
+      <div class="validationText" *ngIf=' email.invalid && (  email.dirty || email.touched) '>
+        <div *ngIf='email.errors.required'>
+                *This field is mandatory
+        </div>
+         </div>
+
+      <label for="phone"><b>Phone</b></label>
+      <input type="text" name="phone" id="phone"
+      #phone='ngModel' [(ngModel)]='customerService.selectedCustomer.phone'
+      placeholder="Enter Phone" pattern="[0-9]+" minlength="10" maxlength="10" required>
+      <div class="validationText"
+      *ngIf='  phone.invalid &&(phone.dirty || phone.touched)'>
+      <div *ngIf='phone.errors.required'>
+              *This field is mandatory
+      </div>
+      <div *ngIf='phone.errors.pattern'>
+              *Enter numbers only.
+      </div>
+      <div *ngIf='phone.errors.minlength'>
+          *Only enter 10 Digit Mobile No
+  </div>
+</div>
+
+      <hr>
+  
+      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+      <button type="submit" class="registerbtn">Update</button>
+    </div>
+  
+    
+  </form>

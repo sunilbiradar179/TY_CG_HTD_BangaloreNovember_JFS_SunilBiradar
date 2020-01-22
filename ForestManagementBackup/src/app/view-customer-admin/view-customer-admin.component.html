@@ -1,0 +1,36 @@
+<div class="alert alert-danger" *ngIf='message' (click)='deleteMessage()' >{{message}}</div>
+
+<table>
+    <tr>
+        <th>Cust Id</th>
+        <th>Cust Name</th>
+        <th>Address1</th>
+        <th>Address2</th>
+        <th>Town</th>
+        <th>Postalcode</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Delete</th>
+        <th>Update</th>
+
+
+      </tr>
+      <tr *ngFor='let customer of customers'>
+        <td><h4>{{customer.custId}}</h4></td> 
+        <td><h4>{{customer.custName}}</h4></td> 
+        <td><h4>{{customer.address1}}</h4></td> 
+        <td><h4>{{customer.addres2}}</h4></td> 
+        <td><h4>{{customer.town}}</h4></td> 
+        <td><h4>{{customer.postalCode}}</h4></td> 
+        <td><h4>{{customer.email}}</h4></td> 
+        <td><h4>{{customer.phone}}</h4></td> 
+        <td><button class="btn btn-danger" (click)='deleteCustomer(customer)'>
+            Delete
+        </button></td>
+        <td><button class="btn btn-success" (click)='selectCustomer(customer)'>
+            Update
+        </button></td>
+        
+      </tr>
+   
+</table>

@@ -1,0 +1,32 @@
+<div class="alert alert-danger" *ngIf='message' (click)='deleteMessage()' >{{message}}</div>
+
+<table>
+    <tr>
+        <th>Contarct No</th>
+        <th>Contract Id</th>
+        <th>Product Id</th>
+        <th>Customer Id</th>
+        <th>Delivery Date</th>
+        <th>Delete</th>
+        <th>Update</th>
+
+
+      </tr>
+      <tr *ngFor='let contract of contracts'>
+        <td><h4>{{contract.contarctno}}</h4></td> 
+        <td><h4>{{contract.contractid}}</h4></td> 
+        <td><h4>{{contract.pid}}</h4></td> 
+        <td><h4>{{contract.custId}}</h4></td> 
+        <td><h4>{{contract.deliverydate}}</h4></td> 
+       
+        <td><button class="btn btn-danger" (click)='deleteContract(contract)'>
+            Delete
+        </button></td>
+        <td><button class="btn btn-success" (click)='selectContract(contract)'>
+            Update
+        </button></td>
+        
+      </tr>
+   
+</table>
+

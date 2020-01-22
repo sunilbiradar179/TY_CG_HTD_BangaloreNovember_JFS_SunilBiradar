@@ -1,0 +1,43 @@
+<form #updateContractForm='ngForm' (ngSubmit)='updateContract(updateContractForm)'>
+    <div class="container">
+      <h1>Update Contract</h1>
+      
+      <hr>
+  
+      <label for="contarctno"><b>Contarct No </b></label>
+      <input type="hidden" name=contarctno id="contarctno"
+      #contarctno='ngModel' [(ngModel)]='contractService.selectedContract.contarctno'
+      placeholder="Enter Contarct number " disabled>
+  
+      <label for="contractid"><b>Contract Id </b></label>
+      <input type="text" name="contractid" id="contractid" 
+      #contractid='ngModel' [(ngModel)]='contractService.selectedContract.contractid'
+      placeholder="Enter Contract id "  disabled>
+  
+      <label for="pid"><b>Product Id</b></label>
+      <input type="text" name="pid" id="pid"
+      #pid='ngModel' [(ngModel)]='contractService.selectedContract.pid'
+      placeholder="Enter Product Id"  disabled>
+
+      <label for="custId"><b>Customer Id</b></label>
+      <input type="text" name="custId" id="custId"
+      #custId='ngModel' [(ngModel)]='contractService.selectedContract.custId'
+      placeholder="Enter Customer Id"  disabled>
+
+      <label for="deliverydate"><b>Delivery Date</b></label>
+      <input type="text" name="deliverydate" id="deliverydate"
+      #deliverydate='ngModel' [(ngModel)]='contractService.selectedContract.deliverydate'
+      placeholder="Enter Delivery Date"  required>
+
+      
+
+
+      <hr>
+  
+      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+      <button type="submit" class="registerbtn">Register</button>
+    </div>
+  
+    
+  </form>
+

@@ -1,0 +1,82 @@
+<div class="alert alert-success" *ngIf='message'>{{message}}</div>
+
+
+
+<form #addContractForm='ngForm' (ngSubmit)='addContract(addContractForm)'>
+    <div class="container">
+      <h1>Add Contract</h1>
+      
+      <hr>
+  
+      <label for="contarctno"><b>Contarct No </b></label>
+      <input type="text" name=contarctno id="contarctno"
+      #contarctno='ngModel' ngModel
+      placeholder="Enter Contarct number " required minlength="1" maxlength="9" pattern="[0-9]+">
+      <div class="validationText" *ngIf='(contarctno.dirty || contarctno.touched) && contarctno.invalid'>
+        <div  *ngIf='contarctno.errors.required'>
+                *This field is mandatory
+        </div>
+        <div *ngIf='contarctno.errors.pattern'>
+                *Only numbers are allowed
+        </div>
+</div>
+  
+      <label for="contractid"><b>Contract Id </b></label>
+      <input type="text" name="contractid" id="contractid" 
+      #contractid='ngModel' ngModel
+      placeholder="Enter Contract id "  required minlength="1" maxlength="9" pattern="[0-9]+">
+
+      <div class="validationText" *ngIf='(contractid.dirty || contractid.touched) && contractid.invalid'>
+        <div  *ngIf='contractid.errors.required'>
+                *This field is mandatory
+        </div>
+        <div *ngIf='contractid.errors.pattern'>
+                *Only numbers are allowed
+        </div>
+</div>
+  
+      <label for="pid"><b>Product Id</b></label>
+      <input type="text" name="pid" id="pid"
+      #pid='ngModel' ngModel
+      placeholder="Enter Product Id"  required minlength="1" maxlength="9" pattern="[0-9]+">
+      <div class="validationText" *ngIf='(pid.dirty || pid.touched) && pid.invalid'>
+        <div  *ngIf='pid.errors.required'>
+                *This field is mandatory
+        </div>
+        <div *ngIf='pid.errors.pattern'>
+                *Only numbers are allowed
+        </div>
+</div>
+
+      <label for="custId"><b>Customer Id</b></label>
+      <input type="text" name="custId" id="custId"
+      #custId='ngModel' ngModel
+      placeholder="Enter Customer Id"  required minlength="1" maxlength="9" pattern="[0-9]+">
+
+      <div class="validationText" *ngIf='(custId.dirty || custId.touched) && custId.invalid'>
+        <div  *ngIf='custId.errors.required'>
+                *This field is mandatory
+        </div>
+        <div *ngIf='custId.errors.pattern'>
+                *Only numbers are allowed
+        </div>
+</div>
+
+
+      <label for="deliverydate"><b>Delivery Date</b></label>
+      <input type="date" name="deliverydate" id="deliverydate"
+      #deliverydate='ngModel' ngModel
+      placeholder="Enter Delivery Date"  required min='{{date}}' >
+
+      
+
+
+      <hr>
+  
+      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+      <button type="submit" class="registerbtn">Register</button>
+    </div>
+  
+    
+  </form>
+

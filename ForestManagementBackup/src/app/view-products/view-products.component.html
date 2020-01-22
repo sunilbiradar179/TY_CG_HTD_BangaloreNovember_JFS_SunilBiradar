@@ -1,0 +1,30 @@
+<table>
+    <tr>
+        <th>pid</th>
+        <th>pname</th>
+        <th>pdesc</th>
+        <th>quantity</th>
+        <th>cost</th>
+        <th>Delete</th>
+        <th>Update</th>
+       
+
+      </tr>
+      <tr *ngFor='let product of products'>
+        <td><h4>{{product.pid}}</h4></td> 
+        <td><h4>{{product.pname}}</h4></td> 
+        <td><h4>{{product.pdesc}}</h4></td> 
+        <td><h4>{{product.quantity}}</h4></td> 
+        <td><h4>{{product.cost}}</h4></td>
+        <td><button class="btn btn-danger" (click)='deleteProduct(product)'>
+          Delete
+      </button></td>
+      <td><button class="btn btn-success" (click)='selectProduct(product)'>
+          Update
+      </button></td> 
+        
+        
+      </tr>
+     
+</table>
+
